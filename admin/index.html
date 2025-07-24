@@ -6,14 +6,6 @@
     <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
   </head>
   <body>
-    <script>
-      // this ensures CMS gets a root element to render into
-      window.CMS_MANUAL_INIT = true;
-      window.addEventListener("load", function () {
-        const root = document.createElement("div");
-        document.body.appendChild(root);
-        window.CMS.init();
-      });
-    </script>
+    <!-- leave body empty, Netlify CMS will inject itself here -->
   </body>
 </html>
