@@ -9,11 +9,11 @@
     <div id="nc-root"></div>
 
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
+      window.addEventListener('load', function () {
         if (window.CMS) {
           window.CMS.init();
         } else {
-          console.error("CMS not loaded");
+          console.error("CMS failed to load");
         }
       });
     </script>
