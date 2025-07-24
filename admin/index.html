@@ -7,15 +7,17 @@
   </head>
   <body>
     <div id="nc-root"></div>
-
     <script>
-      window.addEventListener('load', function () {
-        if (window.CMS) {
+      const mountCMS = () => {
+        const root = document.getElementById("nc-root");
+        if (window.CMS && root) {
           window.CMS.init();
         } else {
-          console.error("CMS failed to load");
+          setTimeout(mountCMS, 100);
         }
-      });
+      };
+
+      window.addEventListener("load", mountCMS);
     </script>
   </body>
 </html>
